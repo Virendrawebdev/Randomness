@@ -1,23 +1,27 @@
-let btn=document.querySelector('.btn')
-let main=document.querySelector('main')
+var btn = document.querySelector('button')
+var h2 = document.querySelector('h2')
+var i = document.querySelector('.inner')
+var h3 = document.querySelector('h3')
+var a = 0;
+btn.addEventListener('click', () => {
+    btn.style.pointerEvents = 'none'
 
-let arr=['Hey!I am virndra...','Best of Luck!', 'Success is the sum of small efforts', 'Repeated day in and day out','Keep Practicing', 'JS is Love' ]
- let  cl=['red','green', 'blue','purple','yellow']
-btn.addEventListener('click',function(){
- var h1=document.createElement('h1');
- let a=Math.floor(Math.random()*arr.length)
- let b=Math.floor(Math.random()*cl.length)
- let x = Math.floor(Math.random()*80)
- let y = Math.floor(Math.random()*80)
- let r = Math.floor(Math.random()*360)
- let fs = Math.floor(Math.random()*3)
+    var num = 50 + Math.floor(Math.random() * 50)
+    console.log(num)
+    var stop = setInterval(function () {
+        a++
+        h2.innerHTML = a + '%'
+        i.style.width = a + '%'
+    }, num);
 
- h1.innerHTML=arr[a]
- h1.style.position='absolute'
- h1.style.left=x+'%'
- h1.style.top=y+'%'
- h1.style.scale=fs
- h1.style.rotate=r+'deg'
- h1.style.color=cl[b]
- main.appendChild(h1)
+    setTimeout(function () {
+        clearInterval(stop)
+        btn.innerHTML = "Downloaded"
+        btn.style.backgroundColor = 'red'
+        btn.style.opacity = '0.5'
+        h3.innerHTML = 'Downloaded in ' + `${num / 10}` + 'seconds';
+
+    }, num * 100);
+
+
 })

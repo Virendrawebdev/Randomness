@@ -6,122 +6,64 @@
 html,body{
     width: 100%;
     height:100%;
-    /* background-color: #111; */
 }
 body{
    width: 100%;
    height:100%; 
-   display: flex;
-   justify-content: center;
-   align-items: center;
    font-family: monospace;
+     padding: 1rem;
+     background-color:#111;
+ 
    
 }
 main{
     width: 100%;
     height: 100%;
-    background-color:rgb(237, 234, 234);
+    padding: 1rem;
+    background:linear-gradient(gray, black);
+    border-radius: 1rem;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 2.5rem;
-    padding:1rem  10rem;
-    flex-wrap: wrap;
-     
+     flex-direction: column;
 }
 .card{
-    width: 25%;
-    height: 23rem;
-    border: 2px solid #fff;
-    border-radius: 1rem;
-    background-color: white;
-}
-.card .top{
     width: 100%;
+    height: 7vw;
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 1.5rem;
+   
+    margin-bottom: 10px;
+   
 }
-.card .top .mg{
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    border: 2px solid gray;
-}
-.card .top .mg img{
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    /* background-size: cover; */
-    object-fit: cover;
-    padding: 5px;
-    border-radius: 50%;
-}
-.card .top h2{
-    padding: 0.4rem;
-    border-radius: 10px;
-    width: fit-content;
-   border: 2px solid gray;
-  font-size: 1rem;
-  color: black;
-  opacity: 0.5;
-}
-.card .center{
-    width: 100%;
-    padding:0.5rem 1.5rem;
-    
-}
-.card .center h3{
-    font-size: 1.2rem;
-    padding-bottom: 0.5rem;
-    white-space: nowrap;
-}
-.card .center h3 span{
-    font-size: 0.8rem;
-    opacity: 0.7;
-    padding-left: 5px;
-    
-}
-.card .center h2{
-    font-size: 1.2rem;
-    white-space: nowrap;
-    padding-bottom: 0.7rem;
-}
-
-.card .btn button{
-   padding: 0.3rem 1rem;
-   background-color:rgb(240, 238, 238);
-   border: 1px solid #fff;
-   font-size: 0.7rem;
-   font-weight: bold;
-   color: #111;
-   border-radius: 5px;
-
-}
-.card .center .btn{
-    padding-bottom: 4rem;
-}
-hr{
-    color: rgb(246, 242, 242);
-    opacity: 0.5;
-}
-.bottom{
-    width: 100%;
+.profile{
     display: flex;
-    justify-content: space-between;
-    padding: 1.5rem;
+    align-items: center;
+    gap: 10px;
 }
-.bottom .text h2{
-    font-size: 1.2rem;
+img{
+    width: 50px;
+    border-radius: 50%;
 }
-.bottom .text p{
-    font-size:0.8rem;
-    opacity: 0.6;
+.card h1{
+    font-size: 2rem;
+    font-weight: 400;
 }
-.btn2{
-   padding: 0.5rem 1.5rem;
-   color:#fff;
-   background-color:#111;
-   border-radius: 10px;
+.card button{
+    width: fit-content;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 1rem;
+    background-color:#333;
+    cursor: pointer;
+    border:2px solid gray;
+}
+.card button:active{
+    scale: 0.95;
+
 }

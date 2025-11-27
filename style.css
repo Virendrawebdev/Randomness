@@ -1,69 +1,154 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
-    width: 100%;
-    height:100%;
-}
-body{
-   width: 100%;
-   height:100%; 
-   font-family: monospace;
-     padding: 1rem;
-     background-color:#111;
- 
-   
-}
-main{
+html,
+body {
     width: 100%;
     height: 100%;
-    padding: 1rem;
-    background:linear-gradient(gray, black);
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+main {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: linear-gradient(to right bottom, rgb(27, 26, 26), black);
+     overflow: auto;
+}
+section {
+    height: 100%;
+    width: 25vw;
+    background-color: black;
+    margin: auto;
     border-radius: 1rem;
+}
+
+.all-reels {
+    height: 100%;
+    width: 100%;
+   overflow: auto;
+   scroll-snap-type: y mandatory;
+   scroll-behavior: smooth;
+}
+.all-reels::-webkit-scrollbar{
+    display: none;
+}
+.reel {
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.reel video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.reel .bottom {
+    background-color: transparent;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: aliceblue;
+}
+.bottom .user {
     display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.bottom .user img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.bottom .user h4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.bottom .user button {
+    background: transparent;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 5px;
+    color: aliceblue;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.bottom>h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+.right {
+    width: 3.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.right >div{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-     flex-direction: column;
-}
-.card{
-    width: 100%;
-    height: 7vw;
-    background-color: #fff;
-    padding: 4rem;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-    margin-bottom: 10px;
-   
-}
-.profile{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-img{
+    text-align: center;
     width: 50px;
-    border-radius: 50%;
 }
-.card h1{
-    font-size: 2rem;
-    font-weight: 400;
+.right i {
+    font-size: 1.3rem;
+    font-weight: 500;
 }
-.card button{
-    width: fit-content;
-    padding: 1rem 2rem;
-    color: #fff;
+#red{
+   color: red;
+}
+.right h6 {
     font-size: 1rem;
-    border-radius: 1rem;
-    background-color:#333;
-    cursor: pointer;
-    border:2px solid gray;
+    font-weight: 500;
 }
-.card button:active{
-    scale: 0.95;
-
+.right >div h4{
+    pointer-events: none;
+}
+.right >div h6{
+    pointer-events: none;
+}
+.mute{
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    top:2%;
+    right:2%;
+}
+.mute i{
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+.mute:active{
+    scale:0.95;
 }
